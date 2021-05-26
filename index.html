@@ -318,13 +318,7 @@
                     <a href="#get-all-job-titles" class="toc-h2 toc-link" data-title="Get All Job Titles">Get All Job Titles</a>
                   </li>
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#get-labor-rate" class="toc-h2 toc-link" data-title="Get Labor Rate">Get Labor Rate</a>
                   </li>
               </ul>
           </li>
@@ -378,149 +372,143 @@
 <td>keyword of job title. Must be great than 3 characters</td>
 </tr>
 </tbody></table>
-<h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+<h2 id='get-labor-rate'>Get Labor Rate</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://demo.ai4govt.com/api/labor"</span> 
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"Labors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"JobTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Software Engineer"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"JobCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"NaicsCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">51913</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"Company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FACEBOOK INC."</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"DefaultPrice"</span><span class="p">:</span><span class="w"> </span><span class="mf">81.52019230769231</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"EducationLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"MinimalYearExp"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"City"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Menlo Park"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"County"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SAN MATEO"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"State"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CA"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"ZipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94025"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"Source"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"Price"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"HourlyWageMean"</span><span class="p">:</span><span class="w"> </span><span class="mf">81.52019230769231</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"AnnualWageMean"</span><span class="p">:</span><span class="w"> </span><span class="mi">169562</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"CurrentYearPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"NextYearPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"SecondYearPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"TotalAmountInvoiced"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"TotalContractHourInvoiced"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"TotalFullTimeEquivalentFTE"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"DataSource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lca"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"Skills"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"JobTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Software Engineer 3"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"JobCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"NaicsCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">454110</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"Company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eBay Inc."</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"DefaultPrice"</span><span class="p">:</span><span class="w"> </span><span class="mf">69.8298076923077</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"EducationLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"MinimalYearExp"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"Location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"City"</span><span class="p">:</span><span class="w"> </span><span class="s2">"San Francisco"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"County"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SAN FRANCISCO"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"State"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CA"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"ZipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94105"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"Source"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"Price"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"HourlyWageMean"</span><span class="p">:</span><span class="w"> </span><span class="mf">69.8298076923077</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"AnnualWageMean"</span><span class="p">:</span><span class="w"> </span><span class="mi">145246</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"CurrentYearPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"NextYearPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"SecondYearPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"TotalAmountInvoiced"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"TotalContractHourInvoiced"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"TotalFullTimeEquivalentFTE"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"DataSource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lca"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"Skills"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"Price"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"Min"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.320192307692306</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Max"</span><span class="p">:</span><span class="w"> </span><span class="mf">115.78990384615386</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Mean"</span><span class="p">:</span><span class="w"> </span><span class="mf">50.863060589250765</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Stdev"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.732518693408466</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Median"</span><span class="p">:</span><span class="w"> </span><span class="mf">46.27019230769231</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Wrap"</span><span class="p">:</span><span class="w"> </span><span class="mf">106.8124272374266</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"MaxCalc"</span><span class="p">:</span><span class="w"> </span><span class="mf">201.29</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"Geo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"CA"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"Price"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"Min"</span><span class="p">:</span><span class="w"> </span><span class="mf">34.285096153846155</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"Max"</span><span class="p">:</span><span class="w"> </span><span class="mf">115.78990384615386</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"Mean"</span><span class="p">:</span><span class="w"> </span><span class="mf">62.30504096989966</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"Stdev"</span><span class="p">:</span><span class="w"> </span><span class="mf">13.033876963590437</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"Median"</span><span class="p">:</span><span class="w"> </span><span class="mf">81.52019230769231</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"Wrap"</span><span class="p">:</span><span class="w"> </span><span class="mf">130.8405860367893</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"Row"</span><span class="p">:</span><span class="w"> </span><span class="mi">230</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves all kittens.</p>
+<p>This endpoint retrieves all labor rate match with the search criteria.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
+<p><code>GET https://demo.ai4govt.com/api/labor</code></p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Data Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>dataSource</td>
+<td>String</td>
+<td>Value of oes, sca, sci, perm, dba, lca</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>limit</td>
+<td>Integer</td>
+<td>Specify max return results</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>Integer</td>
+<td>Result start offset</td>
+</tr>
+<tr>
+<td>jobTitle</td>
+<td>String</td>
+<td>job titles</td>
+</tr>
+<tr>
+<td>jobCode</td>
+<td>String</td>
+<td>OES job code</td>
+</tr>
+<tr>
+<td>location</td>
+<td>String</td>
+<td>location - format: city, state</td>
 </tr>
 </tbody></table>
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Actual return size is limit * number of data sources
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-X</span> DELETE <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
