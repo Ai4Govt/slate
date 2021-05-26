@@ -63,173 +63,119 @@ Parameter | Default | Description
 --------- | ------- | -----------
 jobTitle | false | keyword of job title. Must be great than 3 characters
 
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
+## Get Labor Rate
 
 ```shell
-curl "http://example.com/api/kittens" \
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+curl "https://demo.ai4govt.com/api/labor" 
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
+{
+    "Labors": [
+        {
+            "JobTitle": "Software Engineer",
+            "JobCode": "",
+            "NaicsCode": 51913,
+            "Company": "FACEBOOK INC.",
+            "DefaultPrice": 81.52019230769231,
+            "EducationLevel": "",
+            "MinimalYearExp": 0,
+            "Location": {
+                "City": "Menlo Park",
+                "County": "SAN MATEO",
+                "State": "CA",
+                "ZipCode": "94025",
+                "Source": ""
+            },
+            "Price": {
+                "HourlyWageMean": 81.52019230769231,
+                "AnnualWageMean": 169562,
+                "CurrentYearPrice": 0,
+                "NextYearPrice": 0,
+                "SecondYearPrice": 0,
+                "TotalAmountInvoiced": 0,
+                "TotalContractHourInvoiced": 0,
+                "TotalFullTimeEquivalentFTE": 0
+            },
+            "DataSource": {
+                "Name": "lca"
+            },
+            "Skills": ""
+        },
+        {
+            "JobTitle": "Software Engineer 3",
+            "JobCode": "",
+            "NaicsCode": 454110,
+            "Company": "eBay Inc.",
+            "DefaultPrice": 69.8298076923077,
+            "EducationLevel": "",
+            "MinimalYearExp": 0,
+            "Location": {
+                "City": "San Francisco",
+                "County": "SAN FRANCISCO",
+                "State": "CA",
+                "ZipCode": "94105",
+                "Source": ""
+            },
+            "Price": {
+                "HourlyWageMean": 69.8298076923077,
+                "AnnualWageMean": 145246,
+                "CurrentYearPrice": 0,
+                "NextYearPrice": 0,
+                "SecondYearPrice": 0,
+                "TotalAmountInvoiced": 0,
+                "TotalContractHourInvoiced": 0,
+                "TotalFullTimeEquivalentFTE": 0
+            },
+            "DataSource": {
+                "Name": "lca"
+            },
+            "Skills": ""
+        },
+    ],
+    "Price": {
+        "Min": 20.320192307692306,
+        "Max": 115.78990384615386,
+        "Mean": 50.863060589250765,
+        "Stdev": 12.732518693408466,
+        "Median": 46.27019230769231,
+        "Wrap": 106.8124272374266,
+        "MaxCalc": 201.29
+    },
+    "Geo": {
+      "CA": {
+            "Price": {
+                "Min": 34.285096153846155,
+                "Max": 115.78990384615386,
+                "Mean": 62.30504096989966,
+                "Stdev": 13.033876963590437,
+                "Median": 81.52019230769231,
+                "Wrap": 130.8405860367893
+            },
+            "Row": 230
+        }
+    }
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all labor rate match with the search criteria.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET https://demo.ai4govt.com/api/labor`
 
 ### Query Parameters
 
-Parameter | Default | Description
+Parameter | Data Type | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+dataSource |  String | Value of oes, sca, sci, perm, dba, lca
+limit | Integer | Specify max return results
+offset | Integer | Result start offset
+jobTitle | String | job titles
+jobCode | String | OES job code
+location | String | location - format: city, state
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Actual return size is limit * number of data sources
 </aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2" \
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-
-## Delete a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2" \
-  -X DELETE \
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "deleted" : ":("
-}
-```
-
-This endpoint deletes a specific kitten.
-
-### HTTP Request
-
-`DELETE http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
-
