@@ -535,19 +535,63 @@
 <td>Related model</td>
 </tr>
 </tbody></table>
-<h3 id='labor-rate-model'>Labor rate model</h3><div class="highlight"><pre class="highlight plaintext"><code>"JobTitle"          string
-"JobCode"           string
-"NaicsCode"         int 
-"Company"           string
-"DefaultPrice"      float64
-"LastRevisionDate"  string like 2020-05-09T17:00:00-07:00
-"EducationLevel"    string 
-"MinimalYearExp"    int
-"Location"          Location model
-"Price"             Price model
-"DataSource"        DataSource model
-"Skills"            string
-</code></pre></div><h3 id='price-model'>Price model</h3><div class="highlight"><pre class="highlight plaintext"><code>HourlyWageMean             float64
+<h3 id='labor-rate-model'>Labor rate model</h3>
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Data Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>JobTitle</td>
+<td>string</td>
+</tr>
+<tr>
+<td>JobCode</td>
+<td>string</td>
+</tr>
+<tr>
+<td>NaicsCode</td>
+<td>int</td>
+</tr>
+<tr>
+<td>Company</td>
+<td>string</td>
+</tr>
+<tr>
+<td>DefaultPrice</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>LastRevisionDate</td>
+<td>string like 2020-05-09T17:00:00-07:00</td>
+</tr>
+<tr>
+<td>EducationLevel</td>
+<td>string</td>
+</tr>
+<tr>
+<td>MinimalYearExp</td>
+<td>int</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Location model</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>Price model</td>
+</tr>
+<tr>
+<td>DataSource</td>
+<td>DataSource model</td>
+</tr>
+<tr>
+<td>Skills</td>
+<td>string</td>
+</tr>
+</tbody></table>
+<h3 id='price-model'>Price model</h3><div class="highlight"><pre class="highlight plaintext"><code>HourlyWageMean             float64
 AnnualWageMean             float64
 CurrentYearPrice           float64
 NextYearPrice              float64
