@@ -168,7 +168,7 @@ This endpoint retrieves all labor rate match with the search criteria.
 ### Query Parameters
 
 Parameter | Data Type | Description
---------- | ------- | -----------
+--------- | --------- | -----------
 dataSource |  Array of String | oes, sca, sci, perm, dba, lca
 limit | Integer | Specify max return results
 offset | Integer | Result start offset
@@ -182,7 +182,7 @@ location | String | format: city, state. Example: Ann Arbor, MI
 
 ### Response Model
 Field name | Data Type | Description
------------|----------
+-----------|---------- | -----------
 Labors| array of Labor rate model | returns null if no labor rate is found
 Price | Price model | return with value in 0 if no labor rate is found
 Geo | Map: key is string, value is Geo model | return null if no labor rate is found
