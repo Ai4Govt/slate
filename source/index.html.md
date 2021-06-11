@@ -181,14 +181,14 @@ location | String | format: city, state. Example: Ann Arbor, MI
 
 
 ### Response Model
+Field name | Data Type
+-----------|----------
+Labors| array of Labor rate model
+Price | Price model
+Geo | Map: key is string, value is Geo model
+Count | Long
+Related| Related model
 
-```
-"Labors": [{Labor rate model}],
-"Price": {Price model},
-"Geo": {Map of Geo model},
-"Count": Numeric in Long datatype,
-"Related": {Related model}
-```
 
 ### Labor rate model
 ```
