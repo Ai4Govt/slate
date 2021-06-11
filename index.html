@@ -508,33 +508,13 @@
 <h3 id='sample-request-in-curl'>Sample Request in Curl</h3>
 <p><code>curl https://demo.ai4govt.com/api/labor?dataSource=perm&amp;dataSource=lca&amp;dataSource=calc&amp;limit=10&amp;jobTitle=solar&amp;location=Ann Arbor, MI</code></p>
 <h3 id='response-model'>Response Model</h3>
-<table><thead>
-<tr>
-<th>Field name</th>
-<th>Data Type</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Labors</td>
-<td>array of Labor rate model</td>
-</tr>
-<tr>
-<td>Price</td>
-<td>Price model</td>
-</tr>
-<tr>
-<td>Geo</td>
-<td>Map: key is string, value is Geo model</td>
-</tr>
-<tr>
-<td>Count</td>
-<td>Long</td>
-</tr>
-<tr>
-<td>Related</td>
-<td>Related model</td>
-</tr>
-</tbody></table>
+<p>Field name | Data Type | Description
+-----------|----------
+Labors| array of Labor rate model | returns null if no labor rate is found
+Price | Price model | return with value in 0 if no labor rate is found
+Geo | Map: key is string, value is Geo model | return null if no labor rate is found
+Count | Long | return 0 if no labor rate is found
+Related| Related model | ommitted if labor rate is found</p>
 <h3 id='labor-rate-model'>Labor rate model</h3>
 <table><thead>
 <tr>
