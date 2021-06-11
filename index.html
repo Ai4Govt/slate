@@ -507,12 +507,35 @@
 </tbody></table>
 <h3 id='sample-request-in-curl'>Sample Request in Curl</h3>
 <p><code>curl https://demo.ai4govt.com/api/labor?dataSource=perm&amp;dataSource=lca&amp;dataSource=calc&amp;limit=10&amp;jobTitle=solar&amp;location=Ann Arbor, MI</code></p>
-<h3 id='response-model'>Response Model</h3><div class="highlight"><pre class="highlight plaintext"><code>"Labors": [{Labor rate model}],
-"Price": {Price model},
-"Geo": {Map of Geo model},
-"Count": Numeric in Long datatype,
-"Related": {Related model}
-</code></pre></div><h3 id='labor-rate-model'>Labor rate model</h3><div class="highlight"><pre class="highlight plaintext"><code>"JobTitle"          string
+<h3 id='response-model'>Response Model</h3>
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Data Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Labors</td>
+<td>array of Labor rate model</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>Price model</td>
+</tr>
+<tr>
+<td>Geo</td>
+<td>Map: key is string, value is Geo model</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>Related</td>
+<td>Related model</td>
+</tr>
+</tbody></table>
+<h3 id='labor-rate-model'>Labor rate model</h3><div class="highlight"><pre class="highlight plaintext"><code>"JobTitle"          string
 "JobCode"           string
 "NaicsCode"         int 
 "Company"           string
