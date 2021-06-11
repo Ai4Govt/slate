@@ -169,12 +169,94 @@ This endpoint retrieves all labor rate match with the search criteria.
 
 Parameter | Data Type | Description
 --------- | ------- | -----------
-dataSource |  String | Value of oes, sca, sci, perm, dba, lca
+dataSource |  Array of String | oes, sca, sci, perm, dba, lca
 limit | Integer | Specify max return results
 offset | Integer | Result start offset
 jobTitle | String | job titles
 jobCode | String | OES job code
-location | String | location - format: city, state
+location | String | format: city, state. Example: Ann Arbor, MI
+
+#### Sample Request in Curl
+`curl https://demo.ai4govt.com/api/labor?dataSource=perm&dataSource=lca&dataSource=calc&limit=10&jobTitle=solar&location=Ann Arbor, MI`
+
+
+##### Response Model
+
+```
+"Labors": [{Labor rate model}],
+"Price": {Price model},
+"Geo": {Map of Geo model},
+"Count": Numeric in Long datatype,
+"Related": {Related model}
+```
+
+##### Labor rate model
+```
+"JobTitle"          string
+"JobCode"           string
+"NaicsCode"         int 
+"Company"           string
+"DefaultPrice"      float64
+"LastRevisionDate"  string like 2020-05-09T17:00:00-07:00
+"EducationLevel"    string 
+"MinimalYearExp"    int
+"Location"          Location model
+"Price"             Price model
+"DataSource"        DataSource model
+"Skills"            string
+```
+
+##### Price model
+```
+HourlyWageMean             float64
+AnnualWageMean             float64
+CurrentYearPrice           float64
+NextYearPrice              float64
+SecondYearPrice            float64
+TotalAmountInvoiced        float64
+TotalContractHourInvoiced  float64
+TotalFullTimeEquivalentFTE float64
+```
+
+
+##### Location model
+```
+City    string
+County  string
+State   string
+ZipCode string
+Source  string
+```
+
+##### DataSource model
+```
+Name string
+```
+
+##### Geo model
+```
+Price Geo price model (not the same as price model)
+Row   int
+```
+
+##### Geo price model
+```
+Min        float64
+Max        float64
+Mean       float64
+Stdev      float64
+Median     float64
+Wrap       float64
+MaxCalc    float64
+Multiplier float32
+```
+
+##### Related model
+```
+Area  string
+Count long
+```
+
 
 <aside class="success">
 Actual return size is limit * number of data sources
