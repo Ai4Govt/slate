@@ -476,8 +476,8 @@
 </thead><tbody>
 <tr>
 <td>dataSource</td>
-<td>String</td>
-<td>Value of oes, sca, sci, perm, dba, lca</td>
+<td>Array of String</td>
+<td>oes, sca, sci, perm, dba, lca</td>
 </tr>
 <tr>
 <td>limit</td>
@@ -502,10 +502,55 @@
 <tr>
 <td>location</td>
 <td>String</td>
-<td>location - format: city, state</td>
+<td>format: city, state. Example: Ann Arbor, MI</td>
 </tr>
 </tbody></table>
-
+<h4 id='sample-request-in-curl'>Sample Request in Curl</h4>
+<p><code>curl https://demo.ai4govt.com/api/labor?dataSource=perm&amp;dataSource=lca&amp;dataSource=calc&amp;limit=10&amp;jobTitle=solar&amp;location=Ann Arbor, MI</code></p>
+<h5 id='response-model'>Response Model</h5><div class="highlight"><pre class="highlight plaintext"><code>"Labors": [{Labor rate model}],
+"Price": {Price model},
+"Geo": {Map of Geo model},
+"Count": Numeric in Long datatype,
+"Related": {Related model}
+</code></pre></div><h5 id='labor-rate-model'>Labor rate model</h5><div class="highlight"><pre class="highlight plaintext"><code>"JobTitle"          string
+"JobCode"           string
+"NaicsCode"         int 
+"Company"           string
+"DefaultPrice"      float64
+"LastRevisionDate"  string like 2020-05-09T17:00:00-07:00
+"EducationLevel"    string 
+"MinimalYearExp"    int
+"Location"          Location model
+"Price"             Price model
+"DataSource"        DataSource model
+"Skills"            string
+</code></pre></div><h5 id='price-model'>Price model</h5><div class="highlight"><pre class="highlight plaintext"><code>HourlyWageMean             float64
+AnnualWageMean             float64
+CurrentYearPrice           float64
+NextYearPrice              float64
+SecondYearPrice            float64
+TotalAmountInvoiced        float64
+TotalContractHourInvoiced  float64
+TotalFullTimeEquivalentFTE float64
+</code></pre></div><h5 id='location-model'>Location model</h5><div class="highlight"><pre class="highlight plaintext"><code>City    string
+County  string
+State   string
+ZipCode string
+Source  string
+</code></pre></div><h5 id='datasource-model'>DataSource model</h5><div class="highlight"><pre class="highlight plaintext"><code>Name string
+</code></pre></div><h5 id='geo-model'>Geo model</h5><div class="highlight"><pre class="highlight plaintext"><code>Price Geo price model (not the same as price model)
+Row   int
+</code></pre></div><h5 id='geo-price-model'>Geo price model</h5><div class="highlight"><pre class="highlight plaintext"><code>Min        float64
+Max        float64
+Mean       float64
+Stdev      float64
+Median     float64
+Wrap       float64
+MaxCalc    float64
+Multiplier float32
+</code></pre></div><h5 id='related-model'>Related model</h5><div class="highlight"><pre class="highlight plaintext"><code>Area  string
+Count long
+</code></pre></div>
 <aside class="success">
 Actual return size is limit * number of data sources
 </aside>
