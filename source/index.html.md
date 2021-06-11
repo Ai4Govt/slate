@@ -191,71 +191,76 @@ Related| Related model
 
 
 ### Labor rate model
-```
-"JobTitle"          string
-"JobCode"           string
-"NaicsCode"         int 
-"Company"           string
-"DefaultPrice"      float64
-"LastRevisionDate"  string like 2020-05-09T17:00:00-07:00
-"EducationLevel"    string 
-"MinimalYearExp"    int
-"Location"          Location model
-"Price"             Price model
-"DataSource"        DataSource model
-"Skills"            string
-```
+Field name | Data Type
+-----------|----------
+JobTitle | string
+JobCode | string
+NaicsCode | int 
+Company | string
+DefaultPrice | float64
+LastRevisionDate | string like 2020-05-09T17:00:00-07:00
+EducationLevel  | string 
+MinimalYearExp |   int
+Location |   Location model
+Price |  Price model
+DataSource | DataSource model
+Skills | string
+
 
 ### Price model
-```
-HourlyWageMean             float64
-AnnualWageMean             float64
-CurrentYearPrice           float64
-NextYearPrice              float64
-SecondYearPrice            float64
-TotalAmountInvoiced        float64
-TotalContractHourInvoiced  float64
-TotalFullTimeEquivalentFTE float64
-```
+Field name | Data Type
+-----------|----------
+HourlyWageMean | float64
+AnnualWageMean | float64
+CurrentYearPrice | float64
+NextYearPrice  | float64
+SecondYearPrice | float64
+TotalAmountInvoiced | float64
+TotalContractHourInvoiced  | float64
+TotalFullTimeEquivalentFTE | float64
+
 
 
 ### Location model
-```
-City    string
-County  string
-State   string
-ZipCode string
-Source  string
-```
+Field name | Data Type
+-----------|----------
+City  | string
+County | string
+State | string
+ZipCode | string
+Source  | string
+
 
 ### DataSource model
-```
-Name string
-```
+Field name | Data Type
+-----------|----------
+Name| string
+
 
 ### Geo model
-```
-Price Geo price model (not the same as price model)
-Row   int
-```
+Field name | Data Type
+-----------|----------
+Price | Geo price model (not the same as price model)
+Row  | int
 
 ### Geo price model
-```
-Min        float64
-Max        float64
-Mean       float64
-Stdev      float64
-Median     float64
-Wrap       float64
-MaxCalc    float64
-Multiplier float32
-```
+Field name | Data Type
+-----------|----------
+Min  | float64
+Max  | float64
+Mean | float64
+Stdev | float64
+Median | float64
+Wrap | float64
+MaxCalc | float64
+Multiplier | float32
+
 
 ### Related model
-```
-Area  string
-Count long
-```
+Field name | Data Type
+-----------|----------
+Area | string
+Count | long
 
 
 <aside class="success">
