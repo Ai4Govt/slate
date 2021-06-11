@@ -591,33 +591,159 @@
 <td>string</td>
 </tr>
 </tbody></table>
-<h3 id='price-model'>Price model</h3><div class="highlight"><pre class="highlight plaintext"><code>HourlyWageMean             float64
-AnnualWageMean             float64
-CurrentYearPrice           float64
-NextYearPrice              float64
-SecondYearPrice            float64
-TotalAmountInvoiced        float64
-TotalContractHourInvoiced  float64
-TotalFullTimeEquivalentFTE float64
-</code></pre></div><h3 id='location-model'>Location model</h3><div class="highlight"><pre class="highlight plaintext"><code>City    string
-County  string
-State   string
-ZipCode string
-Source  string
-</code></pre></div><h3 id='datasource-model'>DataSource model</h3><div class="highlight"><pre class="highlight plaintext"><code>Name string
-</code></pre></div><h3 id='geo-model'>Geo model</h3><div class="highlight"><pre class="highlight plaintext"><code>Price Geo price model (not the same as price model)
-Row   int
-</code></pre></div><h3 id='geo-price-model'>Geo price model</h3><div class="highlight"><pre class="highlight plaintext"><code>Min        float64
-Max        float64
-Mean       float64
-Stdev      float64
-Median     float64
-Wrap       float64
-MaxCalc    float64
-Multiplier float32
-</code></pre></div><h3 id='related-model'>Related model</h3><div class="highlight"><pre class="highlight plaintext"><code>Area  string
-Count long
-</code></pre></div>
+<h3 id='price-model'>Price model</h3>
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Data Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HourlyWageMean</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>AnnualWageMean</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>CurrentYearPrice</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>NextYearPrice</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>SecondYearPrice</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>TotalAmountInvoiced</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>TotalContractHourInvoiced</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>TotalFullTimeEquivalentFTE</td>
+<td>float64</td>
+</tr>
+</tbody></table>
+<h3 id='location-model'>Location model</h3>
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Data Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>City</td>
+<td>string</td>
+</tr>
+<tr>
+<td>County</td>
+<td>string</td>
+</tr>
+<tr>
+<td>State</td>
+<td>string</td>
+</tr>
+<tr>
+<td>ZipCode</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>string</td>
+</tr>
+</tbody></table>
+<h3 id='datasource-model'>DataSource model</h3>
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Data Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Name</td>
+<td>string</td>
+</tr>
+</tbody></table>
+<h3 id='geo-model'>Geo model</h3>
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Data Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Price</td>
+<td>Geo price model (not the same as price model)</td>
+</tr>
+<tr>
+<td>Row</td>
+<td>int</td>
+</tr>
+</tbody></table>
+<h3 id='geo-price-model'>Geo price model</h3>
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Data Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Min</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>Mean</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>Stdev</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>Median</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>Wrap</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>MaxCalc</td>
+<td>float64</td>
+</tr>
+<tr>
+<td>Multiplier</td>
+<td>float32</td>
+</tr>
+</tbody></table>
+<h3 id='related-model'>Related model</h3>
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Data Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Area</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>long</td>
+</tr>
+</tbody></table>
+
 <aside class="success">
 Actual return size is limit * number of data sources
 </aside>
