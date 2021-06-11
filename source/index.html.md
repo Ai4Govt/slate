@@ -180,7 +180,7 @@ location | String | format: city, state. Example: Ann Arbor, MI
 `curl https://demo.ai4govt.com/api/labor?dataSource=perm&dataSource=lca&dataSource=calc&limit=10&jobTitle=solar&location=Ann Arbor, MI`
 
 
-##### Response Model
+#### Response Model
 
 ```
 "Labors": [{Labor rate model}],
@@ -190,7 +190,7 @@ location | String | format: city, state. Example: Ann Arbor, MI
 "Related": {Related model}
 ```
 
-##### Labor rate model
+#### Labor rate model
 ```
 "JobTitle"          string
 "JobCode"           string
@@ -206,7 +206,7 @@ location | String | format: city, state. Example: Ann Arbor, MI
 "Skills"            string
 ```
 
-##### Price model
+#### Price model
 ```
 HourlyWageMean             float64
 AnnualWageMean             float64
@@ -219,7 +219,7 @@ TotalFullTimeEquivalentFTE float64
 ```
 
 
-##### Location model
+#### Location model
 ```
 City    string
 County  string
@@ -228,18 +228,18 @@ ZipCode string
 Source  string
 ```
 
-##### DataSource model
+#### DataSource model
 ```
 Name string
 ```
 
-##### Geo model
+#### Geo model
 ```
 Price Geo price model (not the same as price model)
 Row   int
 ```
 
-##### Geo price model
+#### Geo price model
 ```
 Min        float64
 Max        float64
@@ -251,7 +251,7 @@ MaxCalc    float64
 Multiplier float32
 ```
 
-##### Related model
+#### Related model
 ```
 Area  string
 Count long
