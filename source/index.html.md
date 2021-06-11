@@ -176,7 +176,7 @@ jobTitle | String | job titles
 jobCode | String | OES job code
 location | String | format: city, state. Example: Ann Arbor, MI
 
-#### Sample Request in Curl
+### Sample Request in Curl
 `curl https://demo.ai4govt.com/api/labor?dataSource=perm&dataSource=lca&dataSource=calc&limit=10&jobTitle=solar&location=Ann Arbor, MI`
 
 
