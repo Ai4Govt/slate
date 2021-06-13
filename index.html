@@ -1263,7 +1263,129 @@ The spreadsheet is in Microsoft Excel Open XML Spreadsheet (XLSX) format
         </span><span class="nl">"InflationRate"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.75</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
-</span></code></pre></div><h1 id='errors'>Errors</h1>
+</span></code></pre></div><h3 id='response-model-2'>Response model</h3>
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Vendor</td>
+<td>string</td>
+<td>vendor name</td>
+</tr>
+<tr>
+<td>Period</td>
+<td>string</td>
+<td>for example &quot;12 month Base + 6 month Option&quot;</td>
+</tr>
+<tr>
+<td>ContractType</td>
+<td>string</td>
+<td>for example &quot;Firm Fixed Price&quot;</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>string</td>
+<td>usually state name</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>Labor proposal model</td>
+<td>base rate</td>
+</tr>
+<tr>
+<td>Option</td>
+<td>Labor proposal model</td>
+<td>option rate</td>
+</tr>
+<tr>
+<td>InflationRate float64</td>
+<td>for example &quot;2.76&quot;</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='labor-proposal-model'>Labor proposal model</h3>
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LaborCategory</td>
+<td>array of Labor model</td>
+<td>omit if it&#39;s empty</td>
+</tr>
+<tr>
+<td>Subcontractor</td>
+<td>array of Labor model</td>
+<td>omit if it&#39;s empty</td>
+</tr>
+<tr>
+<td>Equipment</td>
+<td>array of Equipment model</td>
+<td>omit if it&#39;s empty</td>
+</tr>
+<tr>
+<td>Travel</td>
+<td>float64</td>
+<td>amount for tavel expense</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>float64</td>
+<td>total amount</td>
+</tr>
+</tbody></table>
+<h3 id='labor-model'>labor model</h3>
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Title</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>Rate</td>
+<td>float64</td>
+<td></td>
+</tr>
+<tr>
+<td>Hours</td>
+<td>float64</td>
+<td></td>
+</tr>
+<tr>
+<td>Employees</td>
+<td>float64</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td>float64</td>
+<td></td>
+</tr>
+<tr>
+<td>BelowMinRate</td>
+<td>bool</td>
+<td>set to true if the rate is below minimum rate</td>
+</tr>
+<tr>
+<td>MinimRate</td>
+<td>float64</td>
+<td>minimum rate (if available)</td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
