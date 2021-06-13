@@ -813,3 +813,12 @@ Employees | float64 |
 Total | float64 |
 BelowMinRate | bool  | set to true if the rate is below minimum rate
 MinimRate | float64 | minimum rate (if available)
+
+
+### Equipment model
+Field name | Data Type
+-----------|----------
+Title | string
+Rate | float64
+Quantity | float64
+Total | float64
