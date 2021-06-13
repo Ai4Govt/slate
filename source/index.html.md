@@ -341,3 +341,475 @@ The spreadsheet is in Excel 97-2003 binary format (.xls)
     }
 ]
 ```
+
+
+## Upload Vendor Proposal spreadsheet
+
+<aside class="success">
+The spreadsheet is in Microsoft Excel Open XML Spreadsheet (XLSX) format
+</aside>
+
+### HTTP Request
+`curl -F "file=@use_case_3.xlsx" http://localhost:8080/api/vendorSheet/upload`
+
+
+> Sample response
+
+```json
+[
+    {
+        "Vendor": "BRASCO DATA INTEGRATION SERVICES ",
+        "Period": "12 month Base + 6 month Option",
+        "ContractType": "Firm Fixed Price",
+        "Location": "California",
+        "Base": {
+            "LaborCategory": [
+                {
+                    "Title": "Project Manager",
+                    "Rate": 120,
+                    "Hours": 1000,
+                    "Employees": 1,
+                    "Total": 120000,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Database Administrator",
+                    "Rate": 122,
+                    "Hours": 1920,
+                    "Employees": 2,
+                    "Total": 468480,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Data Architect",
+                    "Rate": 98,
+                    "Hours": 1920,
+                    "Employees": 1,
+                    "Total": 188160,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Electrician",
+                    "Rate": 10,
+                    "Hours": 1920,
+                    "Employees": 1,
+                    "Total": 19200,
+                    "BelowMinRate": true,
+                    "MinRate": 78
+                }
+            ],
+            "Subcontractor": [
+                {
+                    "Title": "Business Systems Analyst",
+                    "Rate": 100,
+                    "Hours": 1500,
+                    "Employees": 1,
+                    "Total": 150000,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Share Point Developer",
+                    "Rate": 80,
+                    "Hours": 1000,
+                    "Employees": 1,
+                    "Total": 80000,
+                    "BelowMinRate": false
+                }
+            ],
+            "Equipment": [
+                {
+                    "Title": "Laptops ",
+                    "Rate": 600,
+                    "Quantity": 7,
+                    "Total": 4200
+                }
+            ],
+            "Travel": 2000,
+            "Total": 1032040
+        },
+        "Option": {
+            "LaborCategory": [
+                {
+                    "Title": "Project Manager",
+                    "Rate": 122.99999999999999,
+                    "Hours": 500,
+                    "Employees": 1,
+                    "Total": 61499.99999999999,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Database Administrator",
+                    "Rate": 125.04999999999998,
+                    "Hours": 960,
+                    "Employees": 2,
+                    "Total": 240095.99999999997,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Data Architect",
+                    "Rate": 100.44999999999999,
+                    "Hours": 960,
+                    "Employees": 1,
+                    "Total": 96431.99999999999,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Systems Engineer",
+                    "Rate": 10.25,
+                    "Hours": 960,
+                    "Employees": 1,
+                    "Total": 9840,
+                    "BelowMinRate": false
+                }
+            ],
+            "Subcontractor": [
+                {
+                    "Title": "Business Systems Analyst",
+                    "Rate": 102.49999999999999,
+                    "Hours": 750,
+                    "Employees": 1,
+                    "Total": 76874.99999999999,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Share Point Developer",
+                    "Rate": 82,
+                    "Hours": 500,
+                    "Employees": 1,
+                    "Total": 41000,
+                    "BelowMinRate": false
+                }
+            ],
+            "Travel": 1000,
+            "Total": 526743
+        },
+        "InflationRate": 2.5
+    },
+    {
+        "Vendor": "MONTANA ANALYTICS",
+        "Period": "12 month Base + 6 month Option",
+        "ContractType": "Firm Fixed Price",
+        "Location": "Illinois",
+        "Base": {
+            "LaborCategory": [
+                {
+                    "Title": "Senior Project Manager",
+                    "Rate": 115,
+                    "Hours": 1920,
+                    "Employees": 1,
+                    "Total": 220800,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Data Scientist",
+                    "Rate": 125,
+                    "Hours": 1500,
+                    "Employees": 1,
+                    "Total": 187500,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Data Analyst",
+                    "Rate": 95,
+                    "Hours": 1920,
+                    "Employees": 2,
+                    "Total": 364800,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "IT Specialist",
+                    "Rate": 110,
+                    "Hours": 1000,
+                    "Employees": 1,
+                    "Total": 110000,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Data Engineer",
+                    "Rate": 105,
+                    "Hours": 1920,
+                    "Employees": 1,
+                    "Total": 201600,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Systems Engineer",
+                    "Rate": 90,
+                    "Hours": 1500,
+                    "Employees": 1,
+                    "Total": 135000,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Electrician",
+                    "Rate": 35,
+                    "Hours": 1000,
+                    "Employees": 1,
+                    "Total": 35000,
+                    "BelowMinRate": true,
+                    "MinRate": 51.15
+                }
+            ],
+            "Equipment": [
+                {
+                    "Title": "Laptops",
+                    "Rate": 700,
+                    "Quantity": 9,
+                    "Total": 6300
+                }
+            ],
+            "Travel": 3200,
+            "Total": 1264200
+        },
+        "Option": {
+            "LaborCategory": [
+                {
+                    "Title": "Senior Project Manager",
+                    "Rate": 118.45,
+                    "Hours": 960,
+                    "Employees": 1,
+                    "Total": 113712,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Data Scientist",
+                    "Rate": 128.75,
+                    "Hours": 750,
+                    "Employees": 1,
+                    "Total": 96562.5,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Data Analyst",
+                    "Rate": 97.85000000000001,
+                    "Hours": 960,
+                    "Employees": 2,
+                    "Total": 187872.00000000003,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "IT Specialist",
+                    "Rate": 113.3,
+                    "Hours": 500,
+                    "Employees": 1,
+                    "Total": 56650,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Data Engineer",
+                    "Rate": 108.15,
+                    "Hours": 960,
+                    "Employees": 1,
+                    "Total": 103824,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Systems Engineer",
+                    "Rate": 92.7,
+                    "Hours": 750,
+                    "Employees": 1,
+                    "Total": 69525,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Share Point Developer",
+                    "Rate": 36.050000000000004,
+                    "Hours": 500,
+                    "Employees": 1,
+                    "Total": 18025.000000000004,
+                    "BelowMinRate": false
+                }
+            ],
+            "Travel": 2000,
+            "Total": 648170.5
+        },
+        "InflationRate": 3
+    },
+    {
+        "Vendor": "CORLEONE DATA DOMINANCE SERVICES",
+        "Period": "12 month Base + 6 month Option",
+        "ContractType": "Firm Fixed Price",
+        "Location": "Government site",
+        "Base": {
+            "LaborCategory": [
+                {
+                    "Title": "Project Manager Sr.",
+                    "Rate": 150,
+                    "Hours": 1920,
+                    "Employees": 1,
+                    "Total": 288000,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Database Developer",
+                    "Rate": 135,
+                    "Hours": 1920,
+                    "Employees": 2,
+                    "Total": 518400,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Business Intelligence Analyst",
+                    "Rate": 105,
+                    "Hours": 1920,
+                    "Employees": 1,
+                    "Total": 201600,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Database Architect",
+                    "Rate": 125,
+                    "Hours": 1920,
+                    "Employees": 2,
+                    "Total": 480000,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Management Analyst II",
+                    "Rate": 95,
+                    "Hours": 1920,
+                    "Employees": 1,
+                    "Total": 182400,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Database Administrator",
+                    "Rate": 90,
+                    "Hours": 1920,
+                    "Employees": 1,
+                    "Total": 172800,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "SharePoint Developer",
+                    "Rate": 80,
+                    "Hours": 1000,
+                    "Employees": 1,
+                    "Total": 80000,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "IT Specialist",
+                    "Rate": 85,
+                    "Hours": 1000,
+                    "Employees": 1,
+                    "Total": 85000,
+                    "BelowMinRate": false
+                }
+            ],
+            "Equipment": [
+                {
+                    "Title": "Laptops ",
+                    "Rate": 650,
+                    "Quantity": 10,
+                    "Total": 6500
+                }
+            ],
+            "Travel": 1500,
+            "Total": 2016200
+        },
+        "Option": {
+            "LaborCategory": [
+                {
+                    "Title": "Project Manager Sr.",
+                    "Rate": 154.125,
+                    "Hours": 960,
+                    "Employees": 1,
+                    "Total": 147960,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Database Developer",
+                    "Rate": 138.7125,
+                    "Hours": 960,
+                    "Employees": 2,
+                    "Total": 266328,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Business Intelligence Analyst",
+                    "Rate": 107.8875,
+                    "Hours": 960,
+                    "Employees": 1,
+                    "Total": 103572,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Database Architect",
+                    "Rate": 128.4375,
+                    "Hours": 960,
+                    "Employees": 2,
+                    "Total": 246600,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Management Analyst II",
+                    "Rate": 97.61250000000001,
+                    "Hours": 960,
+                    "Employees": 1,
+                    "Total": 93708.00000000001,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "Database Administrator",
+                    "Rate": 92.47500000000001,
+                    "Hours": 960,
+                    "Employees": 1,
+                    "Total": 88776.00000000001,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "SharePoint Developer",
+                    "Rate": 82.2,
+                    "Hours": 500,
+                    "Employees": 1,
+                    "Total": 41100,
+                    "BelowMinRate": false
+                },
+                {
+                    "Title": "IT Specialist",
+                    "Rate": 87.3375,
+                    "Hours": 500,
+                    "Employees": 1,
+                    "Total": 43668.75,
+                    "BelowMinRate": false
+                }
+            ],
+            "Travel": 750,
+            "Total": 1032462.75
+        },
+        "InflationRate": 2.75
+    }
+]
+```
+
+### Response model
+Field name | Data Type | Description
+-----------|---------- | -----------
+Vendor | string | vendor name
+Period | string | for example "12 month Base + 6 month Option"
+ContractType | string | for example "Firm Fixed Price"
+Location | string | usually state name
+Base | Labor proposal model | base rate
+Option | Labor proposal model | option rate
+InflationRate float64 | for example "2.76"
+
+### Labor proposal model
+Field name | Data Type | Description
+-----------|---------- | -----------
+LaborCategory | array of Labor model | omit if it's empty
+Subcontractor | array of Labor model | omit if it's empty
+Equipment  | array of Equipment model | omit if it's empty
+Travel | float64 | amount for tavel expense
+Total  | float64 | total amount
+
+### labor model
+Field name | Data Type | Description
+-----------|---------- | -----------
+Title  | string |
+Rate | float64 |
+Hours | float64 |
+Employees | float64 |
+Total | float64 |
+BelowMinRate | bool  | set to true if the rate is below minimum rate
+MinimRate | float64 | minimum rate (if available)
