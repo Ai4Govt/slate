@@ -320,6 +320,9 @@
                   <li>
                     <a href="#get-labor-rate" class="toc-h2 toc-link" data-title="Get Labor Rate">Get Labor Rate</a>
                   </li>
+                  <li>
+                    <a href="#upload-igce-spreadsheet" class="toc-h2 toc-link" data-title="Upload IGCE spreadsheet">Upload IGCE spreadsheet</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -753,6 +756,77 @@
 <aside class="success">
 Actual return size is limit * number of data sources
 </aside>
+<h2 id='upload-igce-spreadsheet'>Upload IGCE spreadsheet</h2>
+<aside class="success">
+The spreadsheet is in Excel 97-2003 binary format (.xls)
+</aside>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>curl -F &quot;file=@igce1.xls&quot; http://localhost:8080/api/igce/upload</code></p>
+
+<blockquote>
+<p>Sample response
+<code>json
+[
+    {
+        &quot;Occupation&quot;: &quot;Software Engineer&quot;,
+        &quot;Records&quot;: 436,
+        &quot;Code&quot;: &quot;&quot;,
+        &quot;Location&quot;: &quot;&quot;,
+        &quot;Sources&quot;: [
+            {
+                &quot;Name&quot;: &quot;perm&quot;
+            }
+        ],
+        &quot;Rate&quot;: 30.289903846153845,
+        &quot;WrapRate&quot;: 63.60879518825274,
+        &quot;WrapRateMultiplier&quot;: 2.1,
+        &quot;MaxCALC&quot;: 201.29,
+        &quot;Quantity&quot;: 120,
+        &quot;Base&quot;: 0,
+        &quot;YearlyRate&quot;: null
+    },
+    {
+        &quot;Occupation&quot;: &quot;Accountant&quot;,
+        &quot;Records&quot;: 2844,
+        &quot;Code&quot;: &quot;&quot;,
+        &quot;Location&quot;: &quot;&quot;,
+        &quot;Sources&quot;: [
+            {
+                &quot;Name&quot;: &quot;oes&quot;
+            },
+            {
+                &quot;Name&quot;: &quot;perm&quot;
+            }
+        ],
+        &quot;Rate&quot;: 25.89,
+        &quot;WrapRate&quot;: 54.36899753093719,
+        &quot;WrapRateMultiplier&quot;: 2.1,
+        &quot;MaxCALC&quot;: 108.24,
+        &quot;Quantity&quot;: 20,
+        &quot;Base&quot;: 0,
+        &quot;YearlyRate&quot;: null
+    },
+    {
+        &quot;Occupation&quot;: &quot;Project Manager&quot;,
+        &quot;Records&quot;: 1408,
+        &quot;Code&quot;: &quot;&quot;,
+        &quot;Location&quot;: &quot;&quot;,
+        &quot;Sources&quot;: [
+            {
+                &quot;Name&quot;: &quot;perm&quot;
+            }
+        ],
+        &quot;Rate&quot;: 45.7,
+        &quot;WrapRate&quot;: 95.96999564170838,
+        &quot;WrapRateMultiplier&quot;: 2.1,
+        &quot;MaxCALC&quot;: 1069.1,
+        &quot;Quantity&quot;: 80,
+        &quot;Base&quot;: 0,
+        &quot;YearlyRate&quot;: null
+    }
+]
+</code></p>
+</blockquote>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
