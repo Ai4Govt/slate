@@ -323,6 +323,9 @@
                   <li>
                     <a href="#upload-igce-spreadsheet" class="toc-h2 toc-link" data-title="Upload IGCE spreadsheet">Upload IGCE spreadsheet</a>
                   </li>
+                  <li>
+                    <a href="#upload-vendor-proposal-spreadsheet" class="toc-h2 toc-link" data-title="Upload Vendor Proposal spreadsheet">Upload Vendor Proposal spreadsheet</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -823,6 +826,441 @@ The spreadsheet is in Excel 97-2003 binary format (.xls)
         </span><span class="nl">"Quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
         </span><span class="nl">"Base"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="nl">"YearlyRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h2 id='upload-vendor-proposal-spreadsheet'>Upload Vendor Proposal spreadsheet</h2>
+<aside class="success">
+The spreadsheet is in Microsoft Excel Open XML Spreadsheet (XLSX) format
+</aside>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>curl -F &quot;file=@use_case_3.xlsx&quot; http://localhost:8080/api/vendorSheet/upload</code></p>
+
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"Vendor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRASCO DATA INTEGRATION SERVICES "</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12 month Base + 6 month Option"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"ContractType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Firm Fixed Price"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"California"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Base"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"LaborCategory"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Project Manager"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">120000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Database Administrator"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">122</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">468480</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data Architect"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">98</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">188160</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Electrician"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">19200</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"MinRate"</span><span class="p">:</span><span class="w"> </span><span class="mi">78</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"Subcontractor"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Business Systems Analyst"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">150000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Share Point Developer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">80000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"Equipment"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Laptops "</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4200</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"Travel"</span><span class="p">:</span><span class="w"> </span><span class="mi">2000</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1032040</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"Option"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"LaborCategory"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Project Manager"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">122.99999999999999</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mf">61499.99999999999</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Database Administrator"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">125.04999999999998</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">960</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mf">240095.99999999997</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data Architect"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">100.44999999999999</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">960</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mf">96431.99999999999</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Systems Engineer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.25</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">960</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">9840</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"Subcontractor"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Business Systems Analyst"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">102.49999999999999</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">750</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mf">76874.99999999999</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Share Point Developer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">82</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">41000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"Travel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">526743</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"InflationRate"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.5</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"Vendor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MONTANA ANALYTICS"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12 month Base + 6 month Option"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"ContractType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Firm Fixed Price"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Illinois"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Base"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"LaborCategory"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Senior Project Manager"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">115</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">220800</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data Scientist"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">125</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">187500</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data Analyst"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">364800</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IT Specialist"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">110000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data Engineer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">105</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">201600</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Systems Engineer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">135000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Electrician"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">35000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"MinRate"</span><span class="p">:</span><span class="w"> </span><span class="mf">51.15</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"Equipment"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Laptops"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">6300</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"Travel"</span><span class="p">:</span><span class="w"> </span><span class="mi">3200</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1264200</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"Option"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"LaborCategory"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Senior Project Manager"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">118.45</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">960</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">113712</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data Scientist"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">128.75</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">750</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mf">96562.5</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data Analyst"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">97.85000000000001</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">960</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mf">187872.00000000003</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IT Specialist"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">113.3</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">56650</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data Engineer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">108.15</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">960</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">103824</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Systems Engineer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">92.7</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">750</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">69525</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Share Point Developer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">36.050000000000004</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mf">18025.000000000004</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"Travel"</span><span class="p">:</span><span class="w"> </span><span class="mi">2000</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mf">648170.5</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"InflationRate"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"Vendor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CORLEONE DATA DOMINANCE SERVICES"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12 month Base + 6 month Option"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"ContractType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Firm Fixed Price"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Government site"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"Base"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"LaborCategory"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Project Manager Sr."</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">288000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Database Developer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">135</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">518400</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Business Intelligence Analyst"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">105</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">201600</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Database Architect"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">125</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">480000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Management Analyst II"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">182400</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Database Administrator"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">172800</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SharePoint Developer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">80000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IT Specialist"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">85000</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"Equipment"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Laptops "</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">650</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">6500</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"Travel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016200</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"Option"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"LaborCategory"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Project Manager Sr."</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">154.125</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">960</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">147960</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Database Developer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">138.7125</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">960</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">266328</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Business Intelligence Analyst"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">107.8875</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">960</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">103572</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Database Architect"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">128.4375</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">960</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">246600</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Management Analyst II"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">97.61250000000001</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">960</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mf">93708.00000000001</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Database Administrator"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">92.47500000000001</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">960</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mf">88776.00000000001</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SharePoint Developer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">82.2</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mi">41100</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IT Specialist"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">87.3375</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Employees"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mf">43668.75</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"BelowMinRate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"Travel"</span><span class="p">:</span><span class="w"> </span><span class="mi">750</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"Total"</span><span class="p">:</span><span class="w"> </span><span class="mf">1032462.75</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"InflationRate"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.75</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div><h1 id='errors'>Errors</h1>
