@@ -266,3 +266,78 @@ Count | long
 <aside class="success">
 Actual return size is limit * number of data sources
 </aside>
+
+
+## Upload IGCE spreadsheet
+
+<aside class="success">
+The spreadsheet is in Excel 97-2003 binary format (.xls)
+</aside>
+
+### HTTP Request
+`curl -F "file=@igce1.xls" http://localhost:8080/api/igce/upload`
+
+
+> Sample response
+
+```json
+[
+    {
+        "Occupation": "Software Engineer",
+        "Records": 436,
+        "Code": "",
+        "Location": "",
+        "Sources": [
+            {
+                "Name": "perm"
+            }
+        ],
+        "Rate": 30.289903846153845,
+        "WrapRate": 63.60879518825274,
+        "WrapRateMultiplier": 2.1,
+        "MaxCALC": 201.29,
+        "Quantity": 120,
+        "Base": 0,
+        "YearlyRate": null
+    },
+    {
+        "Occupation": "Accountant",
+        "Records": 2844,
+        "Code": "",
+        "Location": "",
+        "Sources": [
+            {
+                "Name": "oes"
+            },
+            {
+                "Name": "perm"
+            }
+        ],
+        "Rate": 25.89,
+        "WrapRate": 54.36899753093719,
+        "WrapRateMultiplier": 2.1,
+        "MaxCALC": 108.24,
+        "Quantity": 20,
+        "Base": 0,
+        "YearlyRate": null
+    },
+    {
+        "Occupation": "Project Manager",
+        "Records": 1408,
+        "Code": "",
+        "Location": "",
+        "Sources": [
+            {
+                "Name": "perm"
+            }
+        ],
+        "Rate": 45.7,
+        "WrapRate": 95.96999564170838,
+        "WrapRateMultiplier": 2.1,
+        "MaxCALC": 1069.1,
+        "Quantity": 80,
+        "Base": 0,
+        "YearlyRate": null
+    }
+]
+```
