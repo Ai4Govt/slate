@@ -510,9 +510,14 @@
 <td>String</td>
 <td>format: city, state. Example: Ann Arbor, MI</td>
 </tr>
+<tr>
+<td>rateType</td>
+<td>String</td>
+<td>&quot;wrap&quot; or &quot;unburdened&quot;. Default value is &quot;wrap&quot;</td>
+</tr>
 </tbody></table>
 <h3 id='sample-request-in-curl'>Sample Request in Curl</h3>
-<p><code>curl https://demo.ai4govt.com/api/labor?dataSource=perm&amp;dataSource=lca&amp;dataSource=calc&amp;limit=10&amp;jobTitle=solar&amp;location=Ann Arbor, MI</code></p>
+<p><code>curl https://demo.ai4govt.com/api/labor?dataSource=perm&amp;dataSource=lca&amp;dataSource=calc&amp;limit=10&amp;jobTitle=solar&amp;location=Ann Arbor, MI&amp;rateType=wrap</code></p>
 <h3 id='response-model'>Response Model</h3>
 <table><thead>
 <tr>
