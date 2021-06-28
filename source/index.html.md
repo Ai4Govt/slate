@@ -178,7 +178,7 @@ location | String | format: city, state. Example: Ann Arbor, MI
 rateType | String | "wrap" or "unburdened". Default value is "wrap"
 
 ### Sample Request in Curl
-`curl https://demo.ai4govt.com/api/labor?dataSource=perm&dataSource=lca&dataSource=calc&limit=10&jobTitle=solar&location=Ann Arbor, MI&rateType=wrap`
+`curl -v "https://demo.ai4govt.com/api/labor?dataSource=perm&dataSource=lca&dataSource=calc&limit=10&jobTitle=solar&location=MI&rateType=wrap"`
 
 
 ### Response Model
