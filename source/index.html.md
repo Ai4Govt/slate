@@ -135,14 +135,22 @@ curl "https://demo.ai4govt.com/api/labor"
             "Skills": ""
         },
     ],
-    "Price": {
-        "Min": 20.320192307692306,
-        "Max": 115.78990384615386,
-        "Mean": 50.863060589250765,
-        "Stdev": 12.732518693408466,
-        "Median": 46.27019230769231,
-        "Wrap": 106.8124272374266,
-        "MaxCalc": 201.29
+    "UnburdenedPrice": {
+        "Min": 13,
+        "Max": 121.21009615384614,
+        "Mean": 64.7972710852552,
+        "Stdev": 14.39762725409194,
+        "Median": 76.30240384615385,
+        "MaxCalc": 851.89
+    },
+    "WrapPrice": {
+        "Min": 27.3,
+        "Max": 254.5412019230769,
+        "Mean": 136.07426927903606,
+        "Stdev": 30.235017233593382,
+        "Median": 160.2350480769231,
+        "MaxCalc": 851.89,
+        "Multiplier": 2.1
     },
     "Geo": {
       "CA": {
@@ -152,7 +160,6 @@ curl "https://demo.ai4govt.com/api/labor"
                 "Mean": 62.30504096989966,
                 "Stdev": 13.033876963590437,
                 "Median": 81.52019230769231,
-                "Wrap": 130.8405860367893
             },
             "Row": 230
         }
@@ -203,7 +210,8 @@ LastRevisionDate | string like 2020-05-09T17:00:00-07:00
 EducationLevel  | string 
 MinimalYearExp |   int
 Location |   Location model
-Price |  Price model
+WrapPrice |  Price model
+UnburdenedPrice | Price model
 DataSource | DataSource model
 Skills | string
 
@@ -252,7 +260,6 @@ Max  | float64
 Mean | float64
 Stdev | float64
 Median | float64
-Wrap | float64
 MaxCalc | float64
 Multiplier | float32
 
