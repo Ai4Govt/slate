@@ -192,7 +192,8 @@ rateType | String | "wrap" or "unburdened". Default value is "wrap"
 Field name | Data Type | Description
 -----------|---------- | -----------
 Labors| array of Labor rate model | returns null if no labor rate is found
-Price | Price model | return with value in 0 if no labor rate is found
+WrapPrice |  Price model | price model calculated based on wrap rate
+UnburdenedPrice | Price model | price model calculated based on unburdened rate
 Geo | Map: key is string, value is Geo model | return null if no labor rate is found
 Count | Long | return 0 if no labor rate is found
 Related| Related model | ommitted if labor rate is found
@@ -210,8 +211,7 @@ LastRevisionDate | string like 2020-05-09T17:00:00-07:00
 EducationLevel  | string 
 MinimalYearExp |   int
 Location |   Location model
-WrapPrice |  Price model
-UnburdenedPrice | Price model
+Price | float64
 DataSource | DataSource model
 Skills | string
 
