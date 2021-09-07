@@ -334,6 +334,12 @@
                   <li>
                     <a href="#sign-in" class="toc-h2 toc-link" data-title="Sign in">Sign in</a>
                   </li>
+                  <li>
+                    <a href="#get-metadata" class="toc-h2 toc-link" data-title="Get metadata">Get metadata</a>
+                  </li>
+                  <li>
+                    <a href="#query-tasks-by-user" class="toc-h2 toc-link" data-title="Query tasks by user">Query tasks by user</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -1434,7 +1440,7 @@ The spreadsheet is in Microsoft Excel Open XML Spreadsheet (XLSX) format
 <p>Http Request
 <code>POST https://platform.ai4govt.com/api/signin</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-d</span> <span class="s2">"username=some_user&amp;password=some_password"</span> <span class="nt">-X</span> post <span class="s2">"https://platform.ai4govt.com/api/signin"</span>
-</code></pre></div><h3 id='input-parameter-form'>Input parameter (Form)</h3>
+</code></pre></div><h3 id='input-parameters-form'>Input parameters (Form)</h3>
 <table><thead>
 <tr>
 <th>Key</th>
@@ -1450,13 +1456,107 @@ The spreadsheet is in Microsoft Excel Open XML Spreadsheet (XLSX) format
 <td>string</td>
 </tr>
 </tbody></table>
-<h3 id='response-example'>Response example</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<h3 id='response-example'>Response example</h3><h3 id='response-model-3'>Response Model</h3>
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>string</td>
+<td>username input by user</td>
+</tr>
+<tr>
+<td>role</td>
+<td>string</td>
+<td>user role</td>
+</tr>
+<tr>
+<td>token</td>
+<td>string</td>
+<td>jwt token</td>
+</tr>
+<tr>
+<td>expiration</td>
+<td>long</td>
+<td>token expiration time in epoc milliseconds</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some_user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some_string"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jwt_token_string"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"expiration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"token_expiration_time_in_epoch_time_ms"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h1 id='errors'>Errors</h1>
+</span></code></pre></div><h2 id='get-metadata'>Get metadata</h2>
+<p>Http request
+<code>GET https://platform.ai4govt.com/api/metadata</code></p>
+
+<p>This API returns platform metadata like docket type, court rooms, etc.</p>
+<h3 id='http-header'>Http header</h3>
+<p>It requires a valid jwt token attached to the request header.
+The content of the header should look like the following:
+<code>Authorization: Bearer &lt;token&gt;</code></p>
+<h3 id='input-parameters'>Input parameters</h3>
+<p>No input parameters is required.</p>
+<h3 id='response-model-4'>Response model</h3><h3 id='response-model-5'>Response Model</h3>
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>docketTypes</td>
+<td>array of string</td>
+<td>return all docket types defined in the system</td>
+</tr>
+<tr>
+<td>courtrooms</td>
+<td>array of string</td>
+<td>return all courtrooms available in the court calendar</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Sample response
+<code>json
+{
+    &quot;docketTypes&quot;: [&quot;type_a&quot;, &quot;type_b&quot;, &quot;type_c&quot;],
+    &quot;courtrooms&quot;: [&quot;room_a&quot;, &quot;room_b&quot;, &quot;room_c&quot;]
+}
+</code></p>
+</blockquote>
+<h2 id='query-tasks-by-user'>Query tasks by user</h2>
+<p>Http Request
+<code>Get https://platform.ai4govt.com/api/users/{userId}/tasks</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userId</td>
+<td>N/A</td>
+<td>user id is an integer for now but we may change it to UUID (string)</td>
+</tr>
+</tbody></table>
+<h3 id='response-model-6'>Response model</h3>
+<blockquote>
+<p>Sample response</p>
+</blockquote>
+<h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
