@@ -329,6 +329,14 @@
               </ul>
           </li>
           <li>
+            <a href="#platform" class="toc-h1 toc-link" data-title="Platform">Platform</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#sign-in" class="toc-h2 toc-link" data-title="Sign in">Sign in</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -1422,7 +1430,33 @@ The spreadsheet is in Microsoft Excel Open XML Spreadsheet (XLSX) format
 <td>float64</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
+<h1 id='platform'>Platform</h1><h2 id='sign-in'>Sign in</h2>
+<p>Http Request
+<code>POST https://platform.ai4govt.com/api/signin</code></p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-d</span> <span class="s2">"username=some_user&amp;password=some_password"</span> <span class="nt">-X</span> post <span class="s2">"https://platform.ai4govt.com/api/signin"</span>
+</code></pre></div><h3 id='input-parameter-form'>Input parameter (Form)</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+</tr>
+</tbody></table>
+<h3 id='response-example'>Response example</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some_user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some_string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jwt_token_string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expiration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"token_expiration_time_in_epoch_time_ms"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
