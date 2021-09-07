@@ -830,3 +830,33 @@ Title | string
 Rate | float64
 Quantity | float64
 Total | float64
+
+# Platform
+
+## Sign in
+
+Http Request
+`POST https://platform.ai4govt.com/api/signin`
+
+```shell
+curl -d "username=some_user&password=some_password" -X post "https://platform.ai4govt.com/api/signin"
+```
+
+### Input parameter (Form)
+Key | Type
+----|------
+username | string
+password | string
+
+
+### Response example
+```json
+{
+    "username": "some_user",
+    "role": "some_string",
+    "token": "jwt_token_string",
+    "expiration": "token_expiration_time_in_epoch_time_ms"
+}
+```
+
+
