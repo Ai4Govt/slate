@@ -842,7 +842,7 @@ Http Request
 curl -d "username=some_user&password=some_password" -X post "https://platform.ai4govt.com/api/signin"
 ```
 
-### Input parameter (Form)
+### Input parameters (Form)
 Key | Type
 ----|------
 username | string
@@ -850,6 +850,17 @@ password | string
 
 
 ### Response example
+
+### Response Model
+Field name | Data Type | Description
+-----------|---------- | -----------
+username | string | username input by user
+role | string | user role 
+token | string | jwt token
+expiration | long | token expiration time in epoc milliseconds 
+
+> Sample response
+
 ```json
 {
     "username": "some_user",
@@ -859,4 +870,48 @@ password | string
 }
 ```
 
+## Get metadata
+
+Http request
+`GET https://platform.ai4govt.com/api/metadata`
+
+This API returns platform metadata like docket type, court rooms, etc.
+
+### Http header 
+It requires a valid jwt token attached to the request header.
+The content of the header should look like the following:
+`Authorization: Bearer <token>`
+
+### Input parameters
+No input parameters is required.
+
+### Response model
+
+### Response Model
+Field name | Data Type | Description
+-----------|---------- | -----------
+docketTypes| array of string | return all docket types defined in the system 
+courtrooms | array of string | return all courtrooms available in the court calendar
+
+> Sample response
+```json
+{
+    "docketTypes": ["type_a", "type_b", "type_c"],
+    "courtrooms": ["room_a", "room_b", "room_c"]
+}
+```
+
+## Query tasks by user
+
+Http Request
+`Get https://platform.ai4govt.com/api/users/{userId}/tasks`
+
+### Query Parameters
+Parameter | Default | Description
+--------- | ------- | -----------
+userId | N/A | user id is an integer for now but we may change it to UUID (string)
+
+### Response model
+
+> Sample response
 
